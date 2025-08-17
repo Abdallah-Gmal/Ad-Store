@@ -1,0 +1,318 @@
+// ------------------- [Start  nav ]-----------------------
+let nav = document.querySelector(".nav");
+let show_nav = document.querySelector(".show_nav");
+show_nav.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+// ------------------- [End  nav ]-----------------------
+// ------------------- [Start  special 4 icon ]-----------------------
+const items_box = document.querySelectorAll(".item_box");
+const coffe_item = document.querySelector(".coffe_item");
+const tea_item = document.querySelector(".tea_item");
+const jucie_item = document.querySelector(".jucie_item");
+const icecream_item = document.querySelector(".icecream_item");
+
+const coffe_icon = document.querySelector(".coffe_icon");
+const tea_icon = document.querySelector(".tea_icon");
+const jucie_icon = document.querySelector(".jucie_icon");
+const icecream_icon = document.querySelector(".icecream_icon");
+
+// icon number 1
+coffe_icon.addEventListener("click", () => {
+  items_box.forEach((item) => {
+    item.classList.add("active");
+  });
+  coffe_item.classList.remove("active");
+});
+
+// icon number 2
+tea_icon.addEventListener("click", () => {
+  items_box.forEach((item) => {
+    item.classList.add("active");
+  });
+  tea_item.classList.remove("active");
+});
+
+// icon number 3
+jucie_icon.addEventListener("click", () => {
+  items_box.forEach((item) => {
+    item.classList.add("active");
+  });
+  jucie_item.classList.remove("active");
+});
+
+// icon number 4
+icecream_icon.addEventListener("click", () => {
+  items_box.forEach((item) => {
+    item.classList.add("active");
+  });
+  icecream_item.classList.remove("active");
+});
+
+// ------------------- [End  special 4 icon ]-----------------------
+// ------------------- [Start background special ]-----------------------
+// const back_ground_special = document.querySelector(".back_ground_special");
+// const all_items_background = document.querySelectorAll(".one_item");
+
+// const coffe_cub_one = document.querySelector(".coffe_cub_one");
+// const coffe_cub_two = document.querySelector(".coffe_cub_two");
+// const coffe_cub_Three = document.querySelector(".coffe_cub_Three");
+// const coffe_cub_Four = document.querySelector(".coffe_cub_Four");
+// const coffe_cub_five = document.querySelector(".coffe_cub_five");
+// const coffe_cub_6 = document.querySelector(".coffe_cub_6");
+// const coffe_cub_7 = document.querySelector(".coffe_cub_7");
+// const coffe_cub_8 = document.querySelector(".coffe_cub_8");
+// const coffe_cub_9 = document.querySelector(".coffe_cub_9");
+// const coffe_cub_10 = document.querySelector(".coffe_cub_10");
+// const coffe_cub_11 = document.querySelector(".coffe_cub_11");
+// const coffe_cub_12 = document.querySelector(".coffe_cub_12");
+// const coffe_cub_13 = document.querySelector(".coffe_cub_13");
+// const coffe_cub_14 = document.querySelector(".coffe_cub_14");
+// const coffe_cub_15 = document.querySelector(".coffe_cub_15");
+// const coffe_cub_16 = document.querySelector(".coffe_cub_16");
+// const coffe_cub_17 = document.querySelector(".coffe_cub_17");
+// const coffe_cub_18 = document.querySelector(".coffe_cub_18");
+// const coffe_cub_19 = document.querySelector(".coffe_cub_19");
+// const coffe_cub_20 = document.querySelector(".coffe_cub_20");
+
+// const item_special_1 = document.querySelector(".item_special_1");
+// const item_special_2 = document.querySelector(".item_special_2");
+// const item_special_3 = document.querySelector(".item_special_3");
+// const item_special_4 = document.querySelector(".item_special_4");
+// const item_special_5 = document.querySelector(".item_special_5");
+// const item_special_6 = document.querySelector(".item_special_6");
+// const item_special_7 = document.querySelector(".item_special_7");
+// const item_special_8 = document.querySelector(".item_special_8");
+// const item_special_9 = document.querySelector(".item_special_9");
+// const item_special_10 = document.querySelector(".item_special_10");
+// const item_special_11 = document.querySelector(".item_special_11");
+// const item_special_12 = document.querySelector(".item_special_12");
+// const item_special_13 = document.querySelector(".item_special_13");
+// const item_special_14 = document.querySelector(".item_special_14");
+// const item_special_15 = document.querySelector(".item_special_15");
+// const item_special_16 = document.querySelector(".item_special_16");
+// const item_special_17 = document.querySelector(".item_special_17");
+// const item_special_18 = document.querySelector(".item_special_18");
+// const item_special_19 = document.querySelector(".item_special_19");
+// const item_special_20 = document.querySelector(".item_special_20");
+
+// // coffe_cub_one
+// item_special_1.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_one.classList.remove("active");
+// });
+
+// // coffe_cub_two
+// item_special_2.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_two.classList.remove("active");
+// });
+
+// // coffe_cub_three
+// item_special_3.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_Three.classList.remove("active");
+// });
+// // coffe_cub_four
+// item_special_4.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_Four.classList.remove("active");
+// });
+
+// // coffe_cub_five
+// item_special_5.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_five.classList.remove("active");
+// });
+// // coffe_cub_6
+// item_special_6.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_6.classList.remove("active");
+// });
+// // coffe_cub_7
+// item_special_7.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_7.classList.remove("active");
+// });
+// // coffe_cub_8
+// item_special_8.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_8.classList.remove("active");
+// });
+// // coffe_cub_9
+// item_special_9.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_9.classList.remove("active");
+// });
+// // coffe_cub_10
+// item_special_10.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_10.classList.remove("active");
+// });
+// // coffe_cub_11
+// item_special_11.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_11.classList.remove("active");
+// });
+// // coffe_cub_12
+// item_special_12.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_12.classList.remove("active");
+// });
+// // coffe_cub_13
+// item_special_13.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_13.classList.remove("active");
+// });
+// // coffe_cub_14
+// item_special_14.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_14.classList.remove("active");
+// });
+// // coffe_cub_15
+// item_special_15.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_15.classList.remove("active");
+// });
+// // coffe_cub_16
+// item_special_16.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_16.classList.remove("active");
+// });
+// // coffe_cub_17
+// item_special_17.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_17.classList.remove("active");
+// });
+// // coffe_cub_18
+// item_special_18.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_18.classList.remove("active");
+// });
+// // coffe_cub_19
+// item_special_19.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_19.classList.remove("active");
+// });
+// // coffe_cub_20
+// item_special_20.addEventListener("click", () => {
+//   back_ground_special.classList.remove("active");
+//   all_items_background.forEach((item) => {
+//     item.classList.add("active");
+//   });
+//   coffe_cub_20.classList.remove("active");
+// });
+
+// // start Esc btn
+// const Esc_btn = document.querySelectorAll(".Esc_btn");
+// Esc_btn.forEach((btn) => {
+//   btn.addEventListener("click", () => {
+//     back_ground_special.classList.add("active");
+//   });
+// });
+// ------------------- [End background special ]-----------------------
+// const back_ground_special = document.querySelector(".back_ground_special");
+// const all_items_background = document.querySelectorAll(".one_item");
+
+// // ربط كل الأزرار الخاصة بالـ items مع الكؤوس
+// for (let i = 1; i <= 20; i++) {
+//   const item = document.querySelector(`.item_special_${i}`);
+//   const cup = document.querySelector(`.coffe_cub_${i === 1 ? "one" : i}`);
+
+//   item.addEventListener("click", () => {
+//     back_ground_special.classList.remove("active");
+//     all_items_background.forEach((el) => el.classList.add("active"));
+//     cup.classList.remove("active");
+//   });
+// }
+
+// // زر Esc
+// document.querySelectorAll(".Esc_btn").forEach((btn) => {
+//   btn.addEventListener("click", () => {
+//     back_ground_special.classList.add("active");
+//   });
+// });
+
+// ----------------------------
+const back_ground_special = document.querySelector(".back_ground_special");
+const all_items_background = document.querySelectorAll(".one_item");
+
+// نجيب كل العناصر اللي ليها كلاس item_special_*
+const items_special = document.querySelectorAll("[class^='item_special_']");
+
+// نضيف Event Listener لكل عنصر
+items_special.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    back_ground_special.classList.remove("active");
+    all_items_background.forEach((el) => el.classList.add("active"));
+
+    // نجيب الكوب اللي ليه نفس الرقم ونشيل منه الـ active
+    const cub = document.querySelector(`.coffe_cub_${index + 1}`);
+    if (cub) cub.classList.remove("active");
+  });
+});
+
+// زرار Esc
+document.querySelectorAll(".Esc_btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    back_ground_special.classList.add("active");
+  });
+});
