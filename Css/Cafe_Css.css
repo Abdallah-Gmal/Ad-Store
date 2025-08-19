@@ -338,7 +338,7 @@ button {
 }
 
 .cafe_page .container_page .cafe_name .name {
-    color: var(--main-color);
+    color: wheat;
     display: flex;
     gap: 10px;
     transition: var(--main-trasition);
@@ -352,7 +352,7 @@ button {
 }
 
 .cafe_page .container_page .cafe_name .icon a {
-    color: var(--main-color);
+    color: wheat;
 }
 
 .cafe_page .container_page .cafe_name .icon i {
@@ -1026,6 +1026,7 @@ button {
     margin-top: 100px;
     background-color: var(--epony-color);
 
+
 }
 
 .cafe_page .container_page .footer .top_content {
@@ -1037,6 +1038,7 @@ button {
     align-items: center;
     padding-top: 30px;
     border-bottom: 1px solid var(--main-color);
+    margin-bottom: 10px;
 }
 
 .cafe_page .container_page .footer .top_content .content_box {
@@ -1205,11 +1207,31 @@ button {
 }
 
 @media (max-width:575px) {
-
     /* start background  */
-    .cafe_page .container_page .back_ground_special .one_item .text_item h4 {
-        font-size: 12px;
+
+    .cafe_page .container_page .back_ground_special .one_item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+    .cafe_page .container_page .back_ground_special .one_item a img {
+        width: 70%;
+    }
+
+    .cafe_page .container_page .back_ground_special .one_item .text_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cafe_page .container_page .back_ground_special .one_item .text_item h4 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+    }
+
 
     .cafe_page .container_page .main_screen .text .top_text h3 {
         font-size: 30px;
@@ -1220,6 +1242,13 @@ button {
     .cafe_page .container_page .back_ground_special .one_item a {
 
         height: 186px;
+    }
+
+
+    /* start popular  */
+
+    .cafe_page .container_page .popular .popular_box .text_popular {
+        padding: 0;
     }
 
     /* start top picks  */
@@ -1288,15 +1317,18 @@ button {
     }
 
     .cafe_page .container_page .menu .menu_items .menu_items_1:nth-child(2) a::before {
-        left: -50px;
+        left: -30px;
     }
 
     .cafe_page .container_page .menu .menu_items .menu_items_1 .text_menu .name_price {
-        width: 60%;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .cafe_page .container_page .menu .menu_items .menu_items_1 a img {
-        width: 75%;
+        width: 80%;
     }
 }
 
