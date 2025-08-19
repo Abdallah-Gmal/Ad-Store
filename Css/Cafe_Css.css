@@ -1288,11 +1288,15 @@ button {
     }
 
     .cafe_page .container_page .menu .menu_items .menu_items_1:nth-child(2) a::before {
-        left: -35px;
+        left: -50px;
     }
 
     .cafe_page .container_page .menu .menu_items .menu_items_1 .text_menu .name_price {
         width: 60%;
+    }
+
+    .cafe_page .container_page .menu .menu_items .menu_items_1 a img {
+        width: 75%;
     }
 }
 
