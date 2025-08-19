@@ -1,10 +1,18 @@
+// ------------------- [ to focus main screen ]-----------------------
+window.addEventListener("load", () => {
+  const topText = document.querySelector(".top_text");
+  if (topText) {
+    topText.scrollIntoView({ behavior: "auto", block: "start" });
+  }
+});
+
 // ------------------- [Start  nav ]-----------------------
+
 let nav = document.querySelector(".nav");
 let show_nav = document.querySelector(".show_nav");
 show_nav.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
-
 // ------------------- [End  nav ]-----------------------
 // ------------------- [Start  special 4 icon ]-----------------------
 const items_box = document.querySelectorAll(".item_box");

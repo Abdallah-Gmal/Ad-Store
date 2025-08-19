@@ -338,7 +338,7 @@ button {
 }
 
 .cafe_page .container_page .cafe_name .name {
-    color: black;
+    color: var(--main-color);
     display: flex;
     gap: 10px;
     transition: var(--main-trasition);
@@ -352,7 +352,7 @@ button {
 }
 
 .cafe_page .container_page .cafe_name .icon a {
-    color: black;
+    color: var(--main-color);
 }
 
 .cafe_page .container_page .cafe_name .icon i {
@@ -1017,23 +1017,26 @@ button {
 .cafe_page .container_page .footer {
     display: flex;
     flex-direction: column;
-    color: #eee;
+    color: var(--main-color);
     width: 100%;
     margin: 0 auto;
     max-width: 1300px;
     margin-bottom: 20px;
+    border: 1px solid var(--main-color);
     margin-top: 100px;
+    background-color: var(--epony-color);
+
 }
 
 .cafe_page .container_page .footer .top_content {
     width: 80%;
-    margin: 20px auto;
+    margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
     align-items: center;
-    border-top: 2px solid white;
     padding-top: 30px;
+    border-bottom: 1px solid var(--main-color);
 }
 
 .cafe_page .container_page .footer .top_content .content_box {
@@ -1106,6 +1109,12 @@ button {
 
 /* ---------------------[Start Media Q]----------- */
 @media (max-width:768px) {
+    .cafe_page .container_page .main_screen {
+        background: url("../img/header_screen.jpeg") no-repeat center;
+        margin-bottom: 150px;
+        background-size: cover;
+        height: 320px;
+    }
 
     /* start background */
     .cafe_page .container_page .back_ground_special .one_item a {
@@ -1153,7 +1162,8 @@ button {
     }
 
     .cafe_page .container_page .popular .popular_box {
-        height: 300px;
+        height: 240px;
+        padding-bottom: 20px;
 
     }
 
@@ -1236,8 +1246,8 @@ button {
 
     /* start menu */
     .cafe_page .container_page .menu {
-        width: 85%;
-        margin: 0 auto;
+        width: 100%;
+        margin: 20px auto;
     }
 
     .cafe_page .container_page .menu .title_menu {
@@ -1249,11 +1259,15 @@ button {
     }
 
     .cafe_page .container_page .menu .menu_items .menu_items_1 .text_menu h4 {
-        font-size: 20px;
+        font-size: 16px;
+        width: 60%;
+        margin-bottom: 5px;
     }
 
     .cafe_page .container_page .menu .menu_items .menu_items_1 .text_menu {
         font-size: 8px;
+        width: 50%;
+        margin-left: 20px;
     }
 
     .cafe_page .container_page .menu .menu_items .menu_items_1 {
@@ -1263,6 +1277,7 @@ button {
 
     .cafe_page .container_page .menu .menu_items .menu_items_1 a {
         height: 140px;
+        width: 50%;
     }
 
     .cafe_page .container_page .menu .menu_items .menu_items_1 a::before {
@@ -1273,7 +1288,11 @@ button {
     }
 
     .cafe_page .container_page .menu .menu_items .menu_items_1:nth-child(2) a::before {
-        left: 0;
+        left: -35px;
+    }
+
+    .cafe_page .container_page .menu .menu_items .menu_items_1 .text_menu .name_price {
+        width: 60%;
     }
 }
 
