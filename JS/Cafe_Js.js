@@ -82,12 +82,14 @@ function startCountdown() {
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       timerEl.innerHTML =
-        `${hours.toString().padStart(2, "0")}:` +
+        ` <i class="fa-solid fa-face-smile-beam"></i> ${hours
+          .toString()
+          .padStart(2, "0")}:` +
         `${minutes.toString().padStart(2, "0")}:` +
         `${seconds.toString().padStart(2, "0")}`;
     } else {
       // يعني الكافيه مقفول
-      timerEl.innerHTML = "We Close";
+      timerEl.innerHTML = `<i class="fa-solid fa-face-frown"></i> We Close`;
     }
   }
 

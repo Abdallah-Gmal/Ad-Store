@@ -247,7 +247,8 @@ button {
 }
 
 .cafe_page .container_page .back_ground_special .one_item a img {
-    border-radius: 50%;
+    width: 80%;
+    border-radius: 20px;
 }
 
 .cafe_page .container_page .back_ground_special .one_item .text_item {
