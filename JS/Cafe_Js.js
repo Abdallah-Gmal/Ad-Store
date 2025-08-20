@@ -400,16 +400,13 @@ icecream_icon.addEventListener("click", () => {
 const back_ground_special = document.querySelector(".back_ground_special");
 const all_items_background = document.querySelectorAll(".one_item");
 
-// نجيب كل العناصر اللي ليها كلاس item_special_*
 const items_special = document.querySelectorAll("[class^='item_special_']");
 
-// نضيف Event Listener لكل عنصر
 items_special.forEach((item, index) => {
   item.addEventListener("click", () => {
     back_ground_special.classList.remove("active");
     all_items_background.forEach((el) => el.classList.add("active"));
 
-    // نجيب الكوب اللي ليه نفس الرقم ونشيل منه الـ active
     const cub = document.querySelector(`.coffe_cub_${index + 1}`);
     if (cub) cub.classList.remove("active");
   });
@@ -420,3 +417,32 @@ document.querySelectorAll(".Esc_btn").forEach((btn) => {
     back_ground_special.classList.add("active");
   });
 });
+
+// ------------------- [visitor ]-----------------------
+const visitorList = document.getElementById("visitorList");
+
+// جلب البيانات السابقة من Local Storage أو إنشاء مصفوفة جديدة
+let visitors = JSON.parse(localStorage.getItem("visitors")) || [];
+
+// الحصول على التاريخ والوقت الحالي
+const now = new Date();
+const pad = (n) => String(n).padStart(2, "0");
+
+const visit = {
+  date: now.toLocaleDateString(), // التاريخ
+  time: `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(
+    now.getSeconds()
+  )}`, // الوقت
+  day: now.toLocaleDateString("en-US", { weekday: "long" }), // اسم اليوم
+};
+
+// إضافة الزيارة الجديدة للمصفوفة
+visitors.push(visit);
+
+// تخزينها في Local Storage
+localStorage.setItem("visitors", JSON.stringify(visitors));
+
+// عرض القائمة
+visitorList.innerHTML = visitors
+  .map((v) => `<li>${v.day} - ${v.date} - ${v.time}</li>`)
+  .join("");
