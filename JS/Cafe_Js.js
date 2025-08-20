@@ -421,30 +421,3 @@ document.querySelectorAll(".Esc_btn").forEach((btn) => {
 });
 
 // ------------------- [visitor ]-----------------------
-const visitorList = document.getElementById("visitorList");
-
-// جلب البيانات السابقة من Local Storage أو إنشاء مصفوفة جديدة
-let visitors = JSON.parse(localStorage.getItem("visitors")) || [];
-
-// الحصول على التاريخ والوقت الحالي
-const now = new Date();
-const pad = (n) => String(n).padStart(2, "0");
-
-const visit = {
-  date: now.toLocaleDateString(), // التاريخ
-  time: `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(
-    now.getSeconds()
-  )}`, // الوقت
-  day: now.toLocaleDateString("en-US", { weekday: "long" }), // اسم اليوم
-};
-
-// إضافة الزيارة الجديدة للمصفوفة
-visitors.push(visit);
-
-// تخزينها في Local Storage
-localStorage.setItem("visitors", JSON.stringify(visitors));
-
-// عرض القائمة
-visitorList.innerHTML = visitors
-  .map((v) => `<li>${v.day} - ${v.date} - ${v.time}</li>`)
-  .join("");
