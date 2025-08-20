@@ -1,5 +1,5 @@
 body {
-    background-color: #010101;
+    background-color: black;
     background-image:
         radial-gradient(circle at 10% 20%, #60483db3 5%, transparent 30%),
         radial-gradient(circle at 50% 90%, #5b413585 0%, transparent 30%),
@@ -7,7 +7,14 @@ body {
 
     background-repeat: no-repeat;
     background-size: cover;
+    transition: var(--main-trasition);
 }
+
+body.active {
+    background-color: #5eb2e0;
+
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -27,9 +34,12 @@ html {
 
 :root {
     --main-color: rgb(201, 178, 148);
+
+    /* --main-color: rgb(150, 201, 148); */
     --main-trasition: 0.4s;
     --epony-color: #372720;
     ---shadow_color: rgba(212, 205, 205, 0.852);
+    /* ---shadow_color: rgba(171, 169, 177, 0.852); */
     --hover-color: rgb(129, 38, 38);
 
 }
@@ -55,8 +65,71 @@ button {
     outline: none;
 }
 
+/* ---------------------[ clock]----------- */
+.container_work {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 680px;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+}
+
+.container_work .clock {
+    width: 350px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.544);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: var(--main-color);
+    border: 5px solid var(--main-color);
+    position: relative;
+    animation: move_down_n3 2s ease-in-out 0s 1 alternate forwards;
+}
+
+@keyframes move_down_n3 {
+    0% {
+        opacity: 0;
+        translate: -500px 0;
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0 0;
+
+    }
+
+}
+
+.container_work .clock h4 {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container_work .clock h2 {
+    font-size: 20px;
+
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
 
 /* ---------------------[ Start Location  whats app]----------- */
+
+
+
 .location_whatsapp {
     position: fixed;
     left: 5%;
@@ -335,6 +408,19 @@ button {
     justify-content: space-evenly;
     z-index: 2;
     margin-top: 20px;
+    animation: move_down_n2 2s ease-in-out 0.5s 1 alternate forwards;
+}
+
+@keyframes move_down_n2 {
+    0% {
+        translate: 0 -100px;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+
+
 }
 
 .cafe_page .container_page .cafe_name .name {
@@ -365,6 +451,38 @@ button {
     cursor: pointer;
 }
 
+.cafe_page .container_page .cafe_name .chang_color {
+    background-color: black;
+    width: 40px;
+    height: 15px;
+    border-radius: 20px;
+    transition: var(--main-trasition);
+    position: relative;
+}
+
+.cafe_page .container_page .cafe_name .chang_color.active {
+    transition: var(--main-trasition);
+    background-color: #5eb2e0;
+}
+
+.cafe_page .container_page .cafe_name .chang_color a {
+    position: absolute;
+    width: 50%;
+    height: 140%;
+    left: -5px;
+    top: -18%;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--main-trasition);
+}
+
+.cafe_page .container_page .cafe_name .chang_color a.active {
+    background-color: var(--epony-color);
+    transition: var(--main-trasition);
+    translate: 28px 0;
+}
+
 
 
 /* ---------------------[End cafe name ]----------- */
@@ -386,6 +504,21 @@ button {
     top: -60px;
     z-index: 1;
     height: 800px;
+    animation: move_right 2.5s ease-in-out 0s 1 alternate forwards;
+}
+
+@keyframes move_right {
+    0% {
+        translate: 0 -600px;
+        opacity: 0;
+    }
+
+    100% {
+        translate: 0 0%;
+        opacity: 1;
+
+    }
+
 }
 
 .cafe_page .container_page .main_screen .imgs_of_main_screen {
@@ -424,13 +557,30 @@ button {
     position: absolute;
     content: "";
     top: 0;
-    left: 0;
+    left: 50%;
     width: 100%;
     height: 100%;
     background-color: #5b4135ac;
     z-index: 1;
     filter: blur(5px);
     max-width: 1300px;
+    animation: add_width 2s ease-in-out 0s 1 alternate forwards;
+}
+
+@keyframes add_width {
+    0% {
+        width: 0;
+    }
+
+
+
+    100% {
+        width: 100%;
+        translate: 0 0;
+        left: 0;
+
+    }
+
 }
 
 .cafe_page .container_page .main_screen .text .top_text {
